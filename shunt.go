@@ -1,3 +1,6 @@
+//Shunting yard algorithm.
+//This is a method for parsing mathematical expressions specified in infix notation. It produces a postfix notation string.
+//Ref: https://web.microsoftstream.com/video/9d83a3f3-bc4f-4bda-95cc-b21c8e67675e
 package main
 
 import (
