@@ -144,14 +144,16 @@ func pomatch(po string, s string) bool {
 
 func main(){
 
-
-    fmt.Println("test output")
-
-    var swoption int
+  //  var swoption int
     var stringInput string
     var regexpInput string
 
-    fmt.Println("Choose Between Infix and Postfix conversion \n Press 1: Infix \n Press 2: Postfix \n Press 3: Exit")
+        fmt.Println("Enter the String and Regular Expression to test")
+        fmt.Scan(&stringInput, &regexpInput)
+
+        fmt.Println(pomatch(regexpInput, stringInput))
+
+  /*  fmt.Println("Choose Between Infix and Postfix conversion \n Press 1: Infix \n Press 2: Postfix \n Press 3: Exit")
     fmt.Scan(&swoption)
     switch swoption {
         case 1:
@@ -161,6 +163,8 @@ func main(){
         fmt.Println("Enter the String and Infix Regular Expression to test")
         fmt.Scan(&stringInput, &regexpInput)
 
+        fmt.Println(pomatch(regexpInput, stringInput))
+
     case 2:
         //case for postfix conversion
         fmt.Println("case 2")
@@ -168,9 +172,10 @@ func main(){
         fmt.Println("Enter the String and Postfix Regular Expression to test")
         fmt.Scan(&stringInput, &regexpInput)
 
+         fmt.Println(pomatch(regexpInput, stringInput))
     default:
         //default
-    }
+    }*/
     //===============================================
     // Answer: ab.c
   /*  fmt.Println("infix: ", "a.b.c*")
