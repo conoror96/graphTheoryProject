@@ -4,11 +4,6 @@ import(
     "fmt"
 )
 
-
-
-
-
-
 //intopost function from shunt.go
 //converts infix notation to postfix notation.
 func intopost(infix string) string {
@@ -149,35 +144,36 @@ func pomatch(po string, s string) bool {
 
 func main(){
 
-    /* i := 2
-    fmt.Print("Write ", i, " as ")
-    switch i {
-    case 1:
-        fmt.Println("one")
-    case 2:
-        fmt.Println("two")
-    default:
-       
-    }*/
+
+    fmt.Println("test output")
 
     var swoption int
-    fmt.scanln(&swoption)
+    var stringInput string
+    var regexpInput string
 
-    fmt.Print("Write ", i, " as ")
+    fmt.Println("Choose Between Infix and Postfix conversion \n Press 1: Infix \n Press 2: Postfix \n Press 3: Exit")
+    fmt.Scan(&swoption)
     switch swoption {
         case 1:
         //case for infix conversion
-        fmt.Println("one")
+        fmt.Println("case 1")
+
+        fmt.Println("Enter the String and Infix Regular Expression to test")
+        fmt.Scan(&stringInput, &regexpInput)
+
     case 2:
         //case for postfix conversion
-        fmt.Println("two")
+        fmt.Println("case 2")
+
+        fmt.Println("Enter the String and Postfix Regular Expression to test")
+        fmt.Scan(&stringInput, &regexpInput)
+
     default:
         //default
-        fmt.Println("three")
     }
     //===============================================
     // Answer: ab.c
-    fmt.Println("infix: ", "a.b.c*")
+  /*  fmt.Println("infix: ", "a.b.c*")
     fmt.Println("postfix: ", intopost("a.b.c*"))
 
     // Answer: abd|.*
@@ -195,6 +191,6 @@ func main(){
     nfa := poregtonfa("ab.c*|")
     fmt.Println(nfa)
 
-     fmt.Println(pomatch("ab.c|", "ab"))
+     fmt.Println(pomatch("ab.c|", "ab")) */
      //===============================================
 }
