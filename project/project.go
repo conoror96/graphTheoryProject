@@ -4,6 +4,11 @@ import(
     "fmt"
 )
 
+
+
+
+
+
 //intopost function from shunt.go
 //converts infix notation to postfix notation.
 func intopost(infix string) string {
@@ -143,6 +148,34 @@ func pomatch(po string, s string) bool {
 }
 
 func main(){
+
+    /* i := 2
+    fmt.Print("Write ", i, " as ")
+    switch i {
+    case 1:
+        fmt.Println("one")
+    case 2:
+        fmt.Println("two")
+    default:
+       
+    }*/
+
+    var swoption int
+    fmt.scanln(&swoption)
+
+    fmt.Print("Write ", i, " as ")
+    switch swoption {
+        case 1:
+        //case for infix conversion
+        fmt.Println("one")
+    case 2:
+        //case for postfix conversion
+        fmt.Println("two")
+    default:
+        //default
+        fmt.Println("three")
+    }
+    //===============================================
     // Answer: ab.c
     fmt.Println("infix: ", "a.b.c*")
     fmt.Println("postfix: ", intopost("a.b.c*"))
@@ -163,4 +196,5 @@ func main(){
     fmt.Println(nfa)
 
      fmt.Println(pomatch("ab.c|", "ab"))
+     //===============================================
 }
