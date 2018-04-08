@@ -155,18 +155,9 @@ func userInput() (string, error){
 
 func main(){
 
-
     var swoption int
  
-
-       /*fmt.Println("Enter the String and Regular Expression to test")
-        fmt.Scan(&stringInput, &regexpInput)
-
-        fmt.Println(pomatch(regexpInput, stringInput)) */
-
-     
-
-   fmt.Println("Choose Between Infix and Postfix conversion \n Press 1: Infix \n Press 2: Postfix \n Press 3: Exit")
+    fmt.Println("Choose Between Infix and Postfix conversion \n Press 1: Infix \n Press 2: Postfix \n Press 3: Exit")
     fmt.Scanln(&swoption)
     switch swoption {
         case 1:
@@ -177,24 +168,33 @@ func main(){
         if err != nil{
             return
         }
-
-        
+       
 		fmt.Println("Infix Expression entered: ", readInfix + "\nPostfix Expression: ", intopost(readInfix))
 
         postfix := intopost(readInfix)
 
-		fmt.Print("Enter String to Match " + intopost(readInfix) + " Against: ");
+		fmt.Println("Enter String to Match " + intopost(readInfix) + " Against: ")
 		readStr, err := userInput()
 		fmt.Println(pomatch(postfix,readStr))	
 
-
     case 2:
         //case for postfix conversion
-        fmt.Println("case 2")
-
-        fmt.Println("Enter the String and Postfix Regular Expression to test")
+        fmt.Println("Enter Postfix Expression: ")
+        readPostfix, err := userInput()
       
+        if err != nil{
+              fmt.Println("uh oh:")
+            return
+        }
+
+        fmt.Println("Postfix Expression entered: ", readPostfix)
+
+        fmt.Println("Enter String to Match " + readPostfix + " Against: ")
+        readStr, err := userInput()
+		fmt.Println(pomatch(readPostfix,readStr))	
+
     default:
+         fmt.Print("Goodbye!")
         //default
     }
 
